@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Movies App</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html"><img src="images/logo.png" alt="Logo">MovieInfo</a>
+                <span>
+                    <div class="search-box">
+                        <input type="text" id="movie-name" placeholder="Enter a movie name">
+                        <button class="fa-solid fa-magnifying-glass" id="search-button"></button>
+                        <div id="suggestions" class="suggestions-box"></div>
+                    </div>
+                </span>
+            </nav>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container">
+            <div class="top-content">
+                <h1 id="section-title">Trending</h1>
+                <span>
+                    <button id="watchlist-button" class="fa-solid fa-clock"></button>
+                    <div class="sort-options">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by" onchange="applySorting()">
+                            <option value="popularity">Popularity</option>
+                            <option value="release_date">Release Date</option>
+                            <option value="vote_average">Vote Average</option>
+                        </select>
+                    </div>
+                </span>
+            </div>
+            <div class="movie-grid" id="movie-grid">
+            </div>
+        </div>
+    </section>
+
+    <section class="movie-overview">
+        <div class="container">
+            <div class="movie-overview" id="movie-overview">
+                <h2 id="movie-name"></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="watchlist" id="watchlist" style="display: none;"">
+        <div class="container">
+            <h1>Watchlist</h1>
+            <p id="empty-watchlist-message" style="display: none;">Your watchlist is empty. Add some movies here that you would like to watch...</p>
+            <div class="movie-grid" id="watchlist-grid"></div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

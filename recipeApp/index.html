@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wdth,wght@100..125,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipe App</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html">👨‍🍳Cooked</a>
+                <span>
+                    <div class="search-box">
+                        <input type="text" id="recipe-name" placeholder="Enter a recipe name">
+                        <button class="fa-solid fa-magnifying-glass" id="search-button"></button>
+                        <div id="suggestions" class="suggestions-box"></div>
+                    </div>
+                </span>
+            </nav>
+        </div>
+    </div>
+
+    <section class="content" id="content-section">
+        <div class="container">
+            <div class="top-content">
+                <h1 id="section-title">Popular Recipes</h1>
+                <button id="favorites-button" class="fa-solid fa-star">Favorites</button>
+            </div>
+            <div class="recipe-grid" id="recipe-grid"></div>
+        </div>
+    </section>
+
+    <section class="recipe-overview" id="recipe-overview" style="display: none;">
+        <div class="container">
+            <div class="recipe-info" id="recipe-info"></div>
+        </div>
+    </section>
+
+    <section class="favorites" id="favorites-section" style="display: none;"">
+        <div class="container">
+            <h1>Favorites</h1>
+            <p id="empty-favorites-message" style="display: none;">Your favorites is empty. Add some recipies here that you would like to cook later...</p>
+            <div class="recipe-grid" id="favorites-grid"></div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
